@@ -1456,4 +1456,648 @@
                                     <td>132</td>
                                     <td><div style="width: 80%; height: 10px; background-color: #e0e0e0; border-radius: 5px;"><div style="width: 30%; height: 100%; background-color: var(--danger); border-radius: 5px;"></div></div></td>
                                 </tr>
-                                <tr
+                                <tr>
+                                    <td>Skimmed Milk (1L)</td>
+                                    <td>132</td>
+                                    <td><div style="width: 80%; height: 10px; background-color: #e0e0e0; border-radius: 5px;"><div style="width: 30%; height: 100%; background-color: var(--danger); border-radius: 5px;"></div></div></td>
+                                </tr>
+                                <tr>
+                                    <td>Ghee (200g)</td>
+                                    <td>98</td>
+                                    <td><div style="width: 80%; height: 10px; background-color: #e0e0e0; border-radius: 5px;"><div style="width: 65%; height: 100%; background-color: var(--success); border-radius: 5px;"></div></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        Weekly Revenue
+                    </div>
+                    <div class="card-body">
+                        <div style="height: 220px; position: relative;">
+                            <canvas id="revenueChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <div class="card">
+                    <div class="card-header">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span>Customer Insights</span>
+                            <div>
+                                <select class="form-select" style="padding: 5px 10px; border: 1px solid #ddd; border-radius: 4px;">
+                                    <option>Last 7 Days</option>
+                                    <option>Last 30 Days</option>
+                                    <option>Last 90 Days</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                            <div class="insight-card">
+                                <div class="insight-title">New Customers</div>
+                                <div class="insight-value">18</div>
+                                <div class="insight-change positive">+28.6% from previous period</div>
+                            </div>
+                            <div class="insight-card">
+                                <div class="insight-title">Retention Rate</div>
+                                <div class="insight-value">87.3%</div>
+                                <div class="insight-change positive">+2.1% from previous period</div>
+                            </div>
+                            <div class="insight-card">
+                                <div class="insight-title">Average Order Value</div>
+                                <div class="insight-value">$14.25</div>
+                                <div class="insight-change negative">-0.8% from previous period</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FRANCHISE PARTNER DASHBOARD -->
+    <section id="franchise-dashboard" style="display: none;">
+        <div class="sidebar">
+            <div style="padding: 20px; text-align: center; margin-bottom: 20px;">
+                <div style="font-size: 20px; font-weight: bold; margin-bottom: 5px;">MilkMate</div>
+                <div style="font-size: 14px;">Partner Dashboard</div>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="#" class="active">Dashboard</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">Inventory</a></li>
+                <li><a href="#">Staff</a></li>
+                <li><a href="#">Payments</a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+            <div style="position: absolute; bottom: 20px; width: 100%; text-align: center;">
+                <div style="padding: 10px;">
+                    <div style="margin-bottom: 5px;">Central Dairy Partner</div>
+                    <button class="btn" style="border: 1px solid #555; color: #eee; padding: 5px 10px; font-size: 12px;">Sign Out</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="admin-content">
+            <div class="admin-header">
+                <h1>Partner Dashboard</h1>
+                <div>
+                    <span style="margin-right: 15px;">April 4, 2025</span>
+                    <button class="btn" style="border: 1px solid #ddd;">Refresh</button>
+                </div>
+            </div>
+            
+            <div class="dashboard-grid">
+                <div class="stat-card" style="background-color: #e3f2fd; color: #1565c0;">
+                    <div class="stat-label">Today's Orders</div>
+                    <div class="stat-value">38</div>
+                    <div>12 Pending, 16 Processing, 10 Completed</div>
+                </div>
+                <div class="stat-card" style="background-color: #e8f5e9; color: #2e7d32;">
+                    <div class="stat-label">Revenue (This Month)</div>
+                    <div class="stat-value">$8,245.70</div>
+                    <div>+5.3% from last month</div>
+                </div>
+                <div class="stat-card" style="background-color: #fff3e0; color: #e65100;">
+                    <div class="stat-label">Inventory Status</div>
+                    <div class="stat-value">92%</div>
+                    <div>2 products low in stock</div>
+                </div>
+                <div class="stat-card" style="background-color: #e1f5fe; color: #0277bd;">
+                    <div class="stat-label">On-time Delivery Rate</div>
+                    <div class="stat-value">97.8%</div>
+                    <div>Target: 98%</div>
+                </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 20px; margin-top: 20px;">
+                <div class="card">
+                    <div class="card-header">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span>Today's Orders</span>
+                            <button class="btn" style="border: 1px solid #ddd; padding: 5px 10px; font-size: 12px;">View All</button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Order #</th>
+                                    <th>Customer</th>
+                                    <th>Items</th>
+                                    <th>Total</th>
+                                    <th>Time</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#2045</td>
+                                    <td>Sarah Johnson</td>
+                                    <td>2× Whole Milk, 1× Yogurt</td>
+                                    <td>$12.45</td>
+                                    <td>6:32 AM</td>
+                                    <td><span class="status-badge status-completed">Completed</span></td>
+                                    <td><button class="btn" style="border: 1px solid #ddd; padding: 5px 10px; font-size: 12px;">Details</button></td>
+                                </tr>
+                                <tr>
+                                    <td>#2046</td>
+                                    <td>Michael Brown</td>
+                                    <td>1× Whole Milk, 1× Butter</td>
+                                    <td>$10.95</td>
+                                    <td>6:45 AM</td>
+                                    <td><span class="status-badge status-completed">Completed</span></td>
+                                    <td><button class="btn" style="border: 1px solid #ddd; padding: 5px 10px; font-size: 12px;">Details</button></td>
+                                </tr>
+                                <tr>
+                                    <td>#2047</td>
+                                    <td>Emily Davis</td>
+                                    <td>2× Skimmed Milk, 2× Yogurt</td>
+                                    <td>$18.90</td>
+                                    <td>7:15 AM</td>
+                                    <td><span class="status-badge status-processing">Processing</span></td>
+                                    <td><button class="btn" style="border: 1px solid #ddd; padding: 5px 10px; font-size: 12px;">Details</button></td>
+                                </tr>
+                                <tr>
+                                    <td>#2048</td>
+                                    <td>James Wilson</td>
+                                    <td>1× Whole Milk, 1× Ghee</td>
+                                    <td>$15.75</td>
+                                    <td>8:03 AM</td>
+                                    <td><span class="status-badge status-processing">Processing</span></td>
+                                    <td><button class="btn" style="border: 1px solid #ddd; padding: 5px 10px; font-size: 12px;">Details</button></td>
+                                </tr>
+                                <tr>
+                                    <td>#2049</td>
+                                    <td>Olivia Smith</td>
+                                    <td>3× Whole Milk</td>
+                                    <td>$13.50</td>
+                                    <td>8:22 AM</td>
+                                    <td><span class="status-badge status-pending">Pending</span></td>
+                                    <td><button class="btn" style="border: 1px solid #ddd; padding: 5px 10px; font-size: 12px;">Details</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        Inventory Status
+                    </div>
+                    <div class="card-body">
+                        <div style="margin-bottom: 15px;">
+                            <h4 style="margin-bottom: 10px;">Low Stock Items</h4>
+                            <div style="padding: 10px; background-color: #fff3e0; border-radius: 5px; margin-bottom: 10px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <div style="font-weight: 500;">Skimmed Milk (1L)</div>
+                                        <div style="font-size: 12px; color: var(--text-light);">15 units remaining</div>
+                                    </div>
+                                    <button class="btn btn-primary" style="padding: 5px 10px; font-size: 12px;">Order</button>
+                                </div>
+                            </div>
+                            <div style="padding: 10px; background-color: #fff3e0; border-radius: 5px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <div style="font-weight: 500;">Fresh Butter (250g)</div>
+                                        <div style="font-size: 12px; color: var(--text-light);">18 units remaining</div>
+                                    </div>
+                                    <button class="btn btn-primary" style="padding: 5px 10px; font-size: 12px;">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h4 style="margin-bottom: 10px;">Product Inventory</h4>
+                        <div style="margin-bottom: 10px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                <span>Fresh Whole Milk (1L)</span>
+                                <span>85 units</span>
+                            </div>
+                            <div style="width: 100%; height: 8px; background-color: #e0e0e0; border-radius: 4px;">
+                                <div style="width: 85%; height: 100%; background-color: var(--success); border-radius: 4px;"></div>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 10px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                <span>Natural Yogurt (500g)</span>
+                                <span>62 units</span>
+                            </div>
+                            <div style="width: 100%; height: 8px; background-color: #e0e0e0; border-radius: 4px;">
+                                <div style="width: 62%; height: 100%; background-color: var(--success); border-radius: 4px;"></div>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 10px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                <span>Fresh Butter (250g)</span>
+                                <span>18 units</span>
+                            </div>
+                            <div style="width: 100%; height: 8px; background-color: #e0e0e0; border-radius: 4px;">
+                                <div style="width: 18%; height: 100%; background-color: var(--warning); border-radius: 4px;"></div>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 10px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                <span>Skimmed Milk (1L)</span>
+                                <span>15 units</span>
+                            </div>
+                            <div style="width: 100%; height: 8px; background-color: #e0e0e0; border-radius: 4px;">
+                                <div style="width: 15%; height: 100%; background-color: var(--danger); border-radius: 4px;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                <span>Ghee (200g)</span>
+                                <span>45 units</span>
+                            </div>
+                            <div style="width: 100%; height: 8px; background-color: #e0e0e0; border-radius: 4px;">
+                                <div style="width: 45%; height: 100%; background-color: var(--success); border-radius: 4px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                <div class="card">
+                    <div class="card-header">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span>Delivery Performance</span>
+                            <select class="form-select" style="padding: 5px 10px; border: 1px solid #ddd; border-radius: 4px;">
+                                <option>This Week</option>
+                                <option>This Month</option>
+                                <option>Last Month</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div style="height: 220px; position: relative;">
+                            <canvas id="deliveryChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        Staff Performance
+                    </div>
+                    <div class="card-body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Staff</th>
+                                    <th>Orders Processed</th>
+                                    <th>On-time Rate</th>
+                                    <th>Rating</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Mark Johnson</td>
+                                    <td>45</td>
+                                    <td>98.7%</td>
+                                    <td>
+                                        <div style="display: flex; color: #ffc107;">
+                                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                            <span style="margin-left: 5px; color: var(--dark);">5.0</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Lisa Chen</td>
+                                    <td>38</td>
+                                    <td>96.5%</td>
+                                    <td>
+                                        <div style="display: flex; color: #ffc107;">
+                                            <span>★</span><span>★</span><span>★</span><span>★</span><span style="color: #e0e0e0;">★</span>
+                                            <span style="margin-left: 5px; color: var(--dark);">4.8</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Ahmed Hassan</td>
+                                    <td>42</td>
+                                    <td>97.2%</td>
+                                    <td>
+                                        <div style="display: flex; color: #ffc107;">
+                                            <span>★</span><span>★</span><span>★</span><span>★</span><span style="color: #e0e0e0;">★</span>
+                                            <span style="margin-left: 5px; color: var(--dark);">4.7</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Priya Sharma</td>
+                                    <td>36</td>
+                                    <td>99.1%</td>
+                                    <td>
+                                        <div style="display: flex; color: #ffc107;">
+                                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                            <span style="margin-left: 5px; color: var(--dark);">4.9</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add CSS for the previously cut-off Admin Panel and the new Franchise Partner Dashboard -->
+    <style>
+        /* Additional styles for Admin Panel and Franchise Partner Dashboard */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: var(--dark);
+            color: white;
+            position: fixed;
+            left: 0;
+            top: 0;
+            overflow-y: auto;
+        }
+        
+        .sidebar-menu {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .sidebar-menu li {
+            padding: 0;
+        }
+        
+        .sidebar-menu li a {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .sidebar-menu li a:hover, .sidebar-menu li a.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--accent);
+        }
+        
+        .sidebar-menu li a.active {
+            border-left: 4px solid var(--accent);
+        }
+        
+        .admin-content {
+            margin-left: 250px;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        
+        .stat-card {
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+        
+        .card-header {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            font-weight: 500;
+        }
+        
+        .card-body {
+            padding: 20px;
+        }
+        
+        .map-container {
+            height: 200px;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        table th, table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        table th {
+            font-weight: 500;
+            color: #666;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .status-pending {
+            background-color: #fff3e0;
+            color: #e65100;
+        }
+        
+        .status-transit, .status-processing {
+            background-color: #e3f2fd;
+            color: #1565c0;
+        }
+        
+        .status-delivered, .status-completed {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .insight-card {
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+        }
+        
+        .insight-title {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .insight-value {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .insight-change {
+            font-size: 13px;
+        }
+        
+        .insight-change.positive {
+            color: var(--success);
+        }
+        
+        .insight-change.negative {
+            color: var(--danger);
+        }
+        
+        /* Variables for consistency */
+        :root {
+            --primary: #1e88e5;
+            --primary-dark: #1565c0;
+            --accent: #ffc107;
+            --success: #28a745;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --text-light: #6c757d;
+        }
+        
+        /* Responsive tweaks */
+        @media (max-width: 992px) {
+            .dashboard-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .admin-content {
+                margin-left: 0;
+                padding-top: 70px;
+            }
+            
+            .sidebar {
+                width: 100%;
+                height: 60px;
+                overflow: hidden;
+                z-index: 100;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <!-- Add JavaScript for the charts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Toggle between sections
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href').substring(1);
+                    
+                    sections.forEach(section => {
+                        section.style.display = 'none';
+                    });
+                    
+                    document.getElementById(targetId).style.display = 'block';
+                    
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    
+                    this.classList.add('active');
+                });
+            });
+            
+            // Revenue Chart (mockup only - would use Chart.js in production)
+            const revenueCtx = document.getElementById('revenueChart');
+            if (revenueCtx) {
+                // For demonstration, this would be replaced with Chart.js
+                const canvas = revenueCtx;
+                const ctx = canvas.getContext('2d');
+                
+                // Mock chart - in production, use a proper charting library
+                ctx.fillStyle = '#e3f2fd';
+                ctx.fillRect(0, 50, 400, 150);
+                
+                ctx.strokeStyle = '#1565c0';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(0, 150);
+                ctx.lineTo(50, 120);
+                ctx.lineTo(100, 140);
+                ctx.lineTo(150, 80);
+                ctx.lineTo(200, 100);
+                ctx.lineTo(250, 70);
+                ctx.lineTo(300, 50);
+                ctx.lineTo(350, 30);
+                ctx.lineTo(400, 50);
+                ctx.stroke();
+            }
+            
+            // Delivery Chart (mockup only - would use Chart.js in production)
+            const deliveryCtx = document.getElementById('deliveryChart');
+            if (deliveryCtx) {
+                // For demonstration, this would be replaced with Chart.js
+                const canvas = deliveryCtx;
+                const ctx = canvas.getContext('2d');
+                
+                // Mock chart - in production, use a proper charting library
+                ctx.fillStyle = '#e8f5e9';
+                ctx.fillRect(0, 50, 400, 150);
+                
+                ctx.strokeStyle = '#2e7d32';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(0, 100);
+                ctx.lineTo(50, 110);
+                ctx.lineTo(100, 90);
+                ctx.lineTo(150, 85);
+                ctx.lineTo(200, 95);
+                ctx.lineTo(250, 80);
+                ctx.lineTo(300, 70);
+                ctx.lineTo(350, 60);
+                ctx.lineTo(400, 50);
+                ctx.stroke();
+            }
+        });
+    </script>
